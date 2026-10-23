@@ -40,14 +40,4 @@ df["Class"].value_counts(normalize=True)*100
 
 X=df.drop("Class",axis=1)
 y=df["Class"]
-print("Feature shape:",X.shape)
-print("Target shape:",y.shape)
 print(X.columns.tolist())
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.20,
-    random_state=42,
-    stratify=y
-)
